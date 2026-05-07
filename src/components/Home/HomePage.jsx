@@ -38,7 +38,7 @@ import React from 'react';
                 Get in Touch
               </a>
               <a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}Hemanth_Reddy_Nomula_Resume.pdf`}
                 download="Hemanth_Reddy_Nomula_Resume.pdf"
                 className="btn-primary flex items-center gap-2 bg-accent/5"
               >
