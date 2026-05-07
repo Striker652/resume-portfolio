@@ -38,8 +38,8 @@ import React from 'react';
                 Get in Touch
               </a>
               <a
-                href={`${import.meta.env.BASE_URL}Hemanth_Reddy_Nomula_Resume.pdf`}
-                download="Hemanth_Reddy_Nomula_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Nomula_Hemanth_Reddy_Resume.pdf`}
+                download="Nomula_Hemanth_Reddy_Resume.pdf"
                 className="btn-primary flex items-center gap-2 bg-accent/5"
               >
                 <Download size={16} />

@@ -1,6 +1,6 @@
 export const resumeData = {
   personal: {
-    name: "Hemanth Reddy Nomula",
+    name: "Nomula Hemanth Reddy",
     address: "3-12-102, Ganesh Nagar, Ramanthapur, Hyd, TL, 500013",
     phone: "+91-9959562824",
     email: "hemanthreddy620@gmail.com"
