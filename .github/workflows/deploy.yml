@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
   # allows you to manually start the deploy action on the Pages tab of your GitHub settings
   workflow_dispatch:
