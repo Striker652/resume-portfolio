@@ -42,10 +42,10 @@ const Footer = () => (
         <a href="mailto:hemanthreddy620@gmail.com" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
           <Mail size={20} />
         </a>
-        <a href="#" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
+        <a href="https://github.com/Striker652" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
           <Github size={20} />
         </a>
-        <a href="#" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
+        <a href="https://www.linkedin.com/in/hemanth-n-4a5a21156" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
           <Linkedin size={20} />
         </a>
       </div>
