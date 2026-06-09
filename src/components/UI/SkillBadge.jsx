@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 
-const SkillBadge = ({ skill, index, delayStep = 0.03 }) => {
+const SkillBadge = memo(({ skill, index, delayStep = 0.03 }) => {
   return (
     <motion.span
-      key={skill}
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
@@ -19,6 +18,8 @@ const SkillBadge = ({ skill, index, delayStep = 0.03 }) => {
       {skill}
     </motion.span>
   );
-};
+});
+
+SkillBadge.displayName = 'SkillBadge';
 
 export default SkillBadge;

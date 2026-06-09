@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 
-const GlassCard = ({ children, className = "", whileHover = {} }) => {
+const GlassCard = memo(({ children, className = "", whileHover = {} }) => {
   return (
     <motion.div
       whileHover={{
@@ -13,6 +13,8 @@ const GlassCard = ({ children, className = "", whileHover = {} }) => {
       {children}
     </motion.div>
   );
-};
+});
+
+GlassCard.displayName = 'GlassCard';
 
 export default GlassCard;

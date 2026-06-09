@@ -1,13 +1,10 @@
 import React from 'react';
 import { ExternalLink, Cpu, Globe, Database } from 'lucide-react';
 import { resumeData } from '../../data/resumeData';
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { cn } from '../../utils/cn';
 import Section from '../UI/Section';
 import Reveal from '../UI/Reveal';
 import GlassCard from '../UI/GlassCard';
-
-const tw = (...input) => twMerge(clsx(input));
 
 const ProjectCard = ({ project, index, IconComponent }) => {
   const isClickable = !!project.link;
@@ -45,7 +42,7 @@ const ProjectCard = ({ project, index, IconComponent }) => {
 
   return (
     <Reveal index={index}>
-      <GlassCard className={tw("h-full w-full", isClickable ? "cursor-pointer" : "cursor-default")}>
+      <GlassCard className={cn("h-full w-full", isClickable ? "cursor-pointer" : "cursor-default")}>
         {isClickable ? (
           <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
             {CardContent}

@@ -7,31 +7,33 @@ import Reveal from '../UI/Reveal';
 import GlassCard from '../UI/GlassCard';
 import SkillBadge from '../UI/SkillBadge';
 
+const CertificationHeader = () => (
+  <div className="flex flex-col items-center">
+    <motion.div
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className="inline-block mb-4"
+    >
+      <Trophy size={48} className="text-accent mx-auto" />
+    </motion.div>
+    <div className="text-4xl font-bold text-textLight dark:text-slate-50 mb-4">
+      Certifications <span className="text-accent">& Achievements</span>
+    </div>
+    <div className="flex justify-center items-center gap-2 text-textDim dark:text-slate-400 text-sm">
+      <Star size={14} className="fill-accent text-accent" />
+      <span>Validated Professional Credentials</span>
+      <Star size={14} className="fill-accent text-accent" />
+    </div>
+  </div>
+);
+
 const Certification = () => {
   return (
     <Section
       id="certifications"
-      title={
-        <div className="flex flex-col items-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-block mb-4"
-          >
-            <Trophy size={48} className="text-accent mx-auto" />
-          </motion.div>
-          <div className="text-4xl font-bold text-textLight dark:text-slate-50 mb-4">
-            Certifications <span className="text-accent">& Achievements</span>
-          </div>
-          <div className="flex justify-center items-center gap-2 text-textDim dark:text-slate-400 text-sm">
-            <Star size={14} className="fill-accent text-accent" />
-            <span>Validated Professional Credentials</span>
-            <Star size={14} className="fill-accent text-accent" />
-          </div>
-        </div>
-      }
+      title={<CertificationHeader />}
     >
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {resumeData.certifications.map((cert, index) => (

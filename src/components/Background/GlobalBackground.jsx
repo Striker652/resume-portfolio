@@ -1,9 +1,23 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const GlobalBackground = () => {
   const canvasRef = useRef(null);
   const mouse = useRef({ x: -1000, y: -1000 });
   const particles = useRef([]);
+  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -35,7 +49,6 @@ const GlobalBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const isDark = document.documentElement.classList.contains('dark');
       const accentColor = isDark ? '#818cf8' : '#4f46e5';
 
       ctx.fillStyle = accentColor;
@@ -86,7 +99,7 @@ const GlobalBackground = () => {
       window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isDark]);
 
   return (
     <canvas

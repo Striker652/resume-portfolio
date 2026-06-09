@@ -9,9 +9,9 @@ const TypingText = () => {
   const timeoutRef = useRef(null);
 
   useEffect(() => {
-    const handleTyping = () => {
-      const currentPhrase = typingPhrases[index];
+    const currentPhrase = typingPhrases[index];
 
+    const handleTyping = () => {
       if (!isDeleting) {
         if (text.length < currentPhrase.length) {
           setText(currentPhrase.slice(0, text.length + 1));
@@ -28,16 +28,13 @@ const TypingText = () => {
       }
     };
 
-    const timer = setTimeout(handleTyping, isDeleting ? 50 : 100);
-    // Note: Using a fixed value for the outer timer,
-    // but I'll move the dynamic speed inside handleTyping by
-    // scheduling the NEXT call at the end of the function.
+    const delay = isDeleting ? 50 : 100;
+    timeoutRef.current = setTimeout(handleTyping, delay);
 
     return () => {
-      clearTimeout(timer);
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [text, isDeleting, index]);
+  }, [text, isDeleting, index, typingPhrases]);
 
   return (
     <span className="text-accent font-medium">
