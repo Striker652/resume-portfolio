@@ -93,5 +93,37 @@ export const resumeData = {
       university: "GITAM University, Hyderabad, India",
       period: "June 2020"
     }
-  ]
+  ],
+  certifications: [
+    {
+      title: "Claude 101 Certificate",
+      issuer: "Anthropic",
+      period: "2026",
+      description: "Completed comprehensive training on Claude AI model capabilities, prompt engineering best practices, and AI-assisted workflow optimization.",
+      link: "https://verify.skilljar.com/c/xmwqm3zoavsw",
+      skills: ["AI", "Prompt Engineering", "Claude", "Workflow Automation"]
+    },
+    {
+      title: "Claude Code in Action",
+      issuer: "Anthropic",
+      period: "2026",
+      description: "Demonstrated mastery of agentic software engineering workflows, utilizing Claude Code for autonomous codebase analysis, complex multi-file refactoring, and accelerating the full development lifecycle.",
+      link: "https://verify.skilljar.com/c/fcxh33ey78rz",
+      skills: ["Claude Code", "Agentic Engineering", "AI-Driven Development", "System Analysis"]
+    }
+  ],
+  socials: {
+    email: "hemanthreddy620@gmail.com",
+    github: "https://github.com/Striker652",
+    linkedin: "https://www.linkedin.com/in/hemanth-n-4a5a21156"
+  },
+  hero: {
+    typingPhrases: [
+      "scalable backends.",
+      "AI-powered apps.",
+      "distributed systems.",
+      "things for the web."
+    ],
+    resumeFilename: "Nomula_Hemanth_Reddy_Resume.pdf"
+  }
 };

@@ -2,9 +2,9 @@ import React from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Sun, Moon } from 'lucide-react';
 import { resumeData } from '../data/resumeData';
 
-const Navbar = ({ toggleTheme, theme }) => {
-  const navItems = ['Home', 'About', 'Experience', 'Projects', 'Education'];
+const navItems = ['Home', 'About', 'Experience', 'Projects', 'Education', 'Certifications'];
 
+const Navbar = ({ toggleTheme, theme }) => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-primary/80 backdrop-blur-md border-b border-slate-800 dark:border-slate-700 dark:bg-slate-900/80">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -39,13 +39,13 @@ const Footer = () => (
         © {new Date().getFullYear()} {resumeData.personal.name}. All rights reserved.
       </div>
       <div className="flex space-x-6">
-        <a href="mailto:hemanthreddy620@gmail.com" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
+        <a href={`mailto:${resumeData.socials.email}`} className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
           <Mail size={20} />
         </a>
-        <a href="https://github.com/Striker652" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
+        <a href={resumeData.socials.github} className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
           <Github size={20} />
         </a>
-        <a href="https://www.linkedin.com/in/hemanth-n-4a5a21156" className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
+        <a href={resumeData.socials.linkedin} className="text-textDim hover:text-accent transition-colors dark:text-slate-400">
           <Linkedin size={20} />
         </a>
       </div>
