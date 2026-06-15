@@ -8,6 +8,7 @@ import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
 import Certification from './components/Certification/Certification';
+import ChatbotContainer from './components/Chatbot/ChatbotContainer';
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
@@ -49,6 +50,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <ChatbotContainer />
     </div>
   );
 }
