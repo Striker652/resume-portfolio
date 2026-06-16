@@ -28,6 +28,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_API_BASE_URL: https://profile-bot-api.onrender.com
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
